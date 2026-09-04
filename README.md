@@ -69,10 +69,10 @@ Below is an example of thresholding gone wrong. Notice how in the last image, tw
 The implications of these types of miscalculations in computer science are far reaching and can lead to issues such as:
 
 *****Add decimals
-Infra-red light from a soap dispense not recognizing dark-skinned hands (read more).
-Facial recognition software not recognizing dark-skinned faces (quick video).
-Self-driving cars being more likely to hit folks with dark skin (read more).
-*****Also add hyperlinks
+Infra-red light from a soap dispense not recognizing dark-skinned hands [(read more)] (https://www.mic.com/articles/124899/the-reason-this-racist-soap-dispenser-doesn-t-work-on-black-skin).
+Facial recognition software not recognizing dark-skinned faces [(quick video)] (https://www.youtube.com/watch?v=162VzSzzoPs).
+Self-driving cars being more likely to hit folks with dark skin [(read more)](https://www.technologyreview.com/2019/03/01/136808/self-driving-cars-are-coming-but-accidents-may-not-be-evenly-distributed/).
+
 The code that you write as computer scientists, (software) engineers, and programmers has real-life consequences that can unintentionally harm people. Keep this in mind as you code because code isn’t objective or siloed.
 
 # Your Task
@@ -88,8 +88,7 @@ For **local thresholding**, your program should use `adib` for value of `T[i,j]`
 `pmax` is the maximum pixel value in the **entire** image
 `pmin` is the minimum pixel value in the **entire** image
 
-*****Add hyperlink
-Below is an image of the formula with better formatting. This formula is from the paper Adaptive document image binarization by Sauvola and PietikaKinen, 2000.
+Below is an image of the formula with better formatting. This formula is from the paper [Adaptive document image binarization](https://doi.org/10.1016/S0031-3203(99)00055-2) by Sauvola and PietikaKinen, 2000.
 
 *****Image Binarization
 
@@ -109,8 +108,7 @@ $ ./prog local cover.img cover_loc_5.img 5
 $ ./prog local cover.img cover_loc_7.img 7
 $ ./prog local cover.img cover_loc_15.img 15
 ```
-*****add hyperlink
-> If you haven’t created C++ programs with command line arguments or need a refresher on how to do so, please read this tutorial and/or watch this video.
+> If you haven’t created C++ programs with command line arguments or need a refresher on how to do so, please read [this tutorial](https://www.geeksforgeeks.org/command-line-arguments-in-c-cpp/) and/or watch [this video](https://www.geeksforgeeks.org/command-line-arguments-in-c-cpp/).
 
 **The images users will give you and that you will generate** will be in the `img` format, using the `.img` extension and formatted as follows: Each image is encoded as a matrix of pixel values where each pixel value is a grayscale intensity, an integer ranging from 0 to 255.
 
@@ -132,8 +130,7 @@ Note that every pixel value is separated by a **single** whitespace. There shoul
 
 > **Implementation Note:** Within your program, you can represent an image either as a bidimensional array, or as an unidimensional array and design your algorithms accordingly.
 
-*****hyperlink
-We prepared a few conversion scripts that can help you test your program with real-world examples, please refer to this repl.it and feel free to fork it or download it to test your own images.
+We prepared a few conversion scripts that can help you test your program with real-world examples, please refer to [this repl.it](https://repl.it/@VictoriaChvez/212-ib-examples) and feel free to fork it or download it to test your own images.
 
 # Requirements
 Your submission will be **tested and graded by an autograder,** for this reason it cannot be stressed enough that your program must **exactly** follow the assignment specifications:
@@ -162,7 +159,6 @@ $ ./prog local cover.img cover_loc_5.img 5
 $ ./prog local cover.img cover_loc_7.img 7
 $ ./prog local cover.img cover_loc_15.img 15
 ```
-*****hyperlink
-> Once you’ve read through the assignment, I encourage you to check out the breakdown video associated with it.
+> Once you’ve read through the assignment, I encourage you to check out [the breakdown video](https://youtu.be/kvQj8BqF7yU) associated with it.
 
 > README.md has been created based on the original assignment description. The original assignment can be found at https://vcc-csc212.github.io/sp21-archive/dd1/#task
