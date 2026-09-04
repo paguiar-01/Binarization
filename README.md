@@ -68,7 +68,7 @@ Below is an example of thresholding gone wrong. Notice how in the last image, tw
 
 The implications of these types of miscalculations in computer science are far reaching and can lead to issues such as:
 
-*****Add decimals
+*****Add decimals and figure out how to make hyperlinks with ()
 Infra-red light from a soap dispense not recognizing dark-skinned hands [(read more)] (https://www.mic.com/articles/124899/the-reason-this-racist-soap-dispenser-doesn-t-work-on-black-skin).
 Facial recognition software not recognizing dark-skinned faces [(quick video)] (https://www.youtube.com/watch?v=162VzSzzoPs).
 Self-driving cars being more likely to hit folks with dark skin [(read more)](https://www.technologyreview.com/2019/03/01/136808/self-driving-cars-are-coming-but-accidents-may-not-be-evenly-distributed/).
