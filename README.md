@@ -10,7 +10,7 @@ In computer vision, *image binarization*, a.k.a. *thresholding* is the process o
 ## Thresholding IRL
 A popular application of (color) thresholding is recreating the effects from Andy Warhol’s Pop Art or Obama’s 2008 Hope poster by Shepard Fairey. While these posters were done by hand, using color thresholding, we can create an algorithm that does the same. Nowadays, there are many online converters that will take an image and convert it to the likes of these iconic pieces. For simplicity’s sake, we’ll be doing the more simple black and white thresholding but you’re welcome to [explore color thresholding](https://www.ecosia.org/search?q=color+thresholding) on your own!
 
-*****Andy Warhol's Marilyn Monroe Pop Art Poster             Obama's 2008 Hope Poster
+![Thresholding](Images/thresholding.jpg) ![Obama Hope](Images/obama-hope.jpeg)
 
 ## Global Thresholding
 It’s important to note that pixel values for an image are stored in a matrix. Matrices don’t have to be perfect squares (i.e., 2x2, 3x3, 10x10), and while all most of our examples below are perfect squares, your program should work on images of any dimensions (perfect squares or not).
@@ -37,7 +37,7 @@ endfor
 The value of `T` can be automatically calculated by using a function. For example, `T` can be either 1) the average intensity or 2) the median of all pixels. There are hundreds of different ways for calculating `T`, often involving statistical measures.
 
 ## Local Thresholding
-While global thresholding uses a constant threshold `T` for transforming each pixel in an image, the idea behind local thresholding is to transform pixels by only considering the surrounding area, i.e., the local neighborhood of each pixel. The neighborhood of a pixel `p` is a small matrix of dimensions `d x d` centered at `p`. In this case, for each pixel in the image, we are basically calculating a different `T`. The algorithm below shows how to binarize an image using local thresholding.
+While global thresholding uses a constant threshold `T` for transforming each pixel in an image, the idea behind local thresholding is to transform pixels by only considering the surrounding area, i.e., the **local neighborhood** of each pixel. The neighborhood of a pixel `p` is a small matrix of dimensions `d x d` centered at `p`. In this case, for each pixel in the image, we are basically calculating a different `T`. The algorithm below shows how to binarize an image using local thresholding.
 
 ```
 input: Image A (grayscale)
@@ -55,7 +55,7 @@ endfor
 
 As an illustration, the figure below shows an example of applying local thresholding. In this specific example, the `median` is what’s as the metric for deciding the new value of a pixel:
 
-*****Image Binarization
+![Local Thresholding](Images/local-thresholding.jpg)
 
 > Note that when calculating the neighborhood of pixels at the edges, where the neighborhood is not a perfect fit, we ignore all pixels that fall outside the boundaries of the image. In the illustration above, this is the case of the pixel at position `[0,0]` highlighted in orange.
 
