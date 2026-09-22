@@ -64,35 +64,34 @@ If you’re paying attention and understanding the concept of thresholding so fa
 
 Below is an example of thresholding gone wrong. Notice how in the last image, two of the objects and part of the third completely disappear:
 
-*****Example of thresholding removing objects from the image altogether
+![Bad Thresholding](Images/bad-thresholding.jpg)
 
 The implications of these types of miscalculations in computer science are far reaching and can lead to issues such as:
 
-*****Add decimals and figure out how to make hyperlinks with ()
-Infra-red light from a soap dispense not recognizing dark-skinned hands [(read more)] (https://www.mic.com/articles/124899/the-reason-this-racist-soap-dispenser-doesn-t-work-on-black-skin).
-Facial recognition software not recognizing dark-skinned faces [(quick video)] (https://www.youtube.com/watch?v=162VzSzzoPs).
-Self-driving cars being more likely to hit folks with dark skin [(read more)](https://www.technologyreview.com/2019/03/01/136808/self-driving-cars-are-coming-but-accidents-may-not-be-evenly-distributed/).
+*****Hyperlinks with ()
+- Infra-red light from a soap dispense not recognizing dark-skinned hands [(read more)] (https://www.mic.com/articles/124899/the-reason-this-racist-soap-dispenser-doesn-t-work-on-black-skin).
+- Facial recognition software not recognizing dark-skinned faces [(quick video)] (https://www.youtube.com/watch?v=162VzSzzoPs).
+- Self-driving cars being more likely to hit folks with dark skin [(read more)](https://www.technologyreview.com/2019/03/01/136808/self-driving-cars-are-coming-but-accidents-may-not-be-evenly-distributed/).
 
 The code that you write as computer scientists, (software) engineers, and programmers has real-life consequences that can unintentionally harm people. Keep this in mind as you code because code isn’t objective or siloed.
 
 # Your Task
 Your goal in this assignment is to develop a command line tool that performs image binarization, given some options (described below) provided by the user. Your program will do both global and local thresholding, depending on the user’s arguments.
 
-*****add decimals
-For **global thresholding**, your program should use the `median` of all pixels for the value of `T`.
-For **local thresholding**, your program should use `adib` for value of `T[i,j]`, as calculated by the following formula: `T[i,j] = m(i,j) * (1 + k * ((s(i,j)/r)-1))` where:
-`m` is the mean of the local neighborhood centered at pixel (i,j)
-`s` is the standard deviation of the local neighborhood centered at pixel (i,j)
-`k` is 0.2
-`R` is `0.5 * (pmax-pmin)`
-`pmax` is the maximum pixel value in the **entire** image
-`pmin` is the minimum pixel value in the **entire** image
+- For **global thresholding**, your program should use the `median` of all pixels for the value of `T`.
+- For **local thresholding**, your program should use `adib` for value of `T[i,j]`, as calculated by the following formula: `T[i,j] = m(i,j) * (1 + k * ((s(i,j)/r)-1))` where:
+    - `m` is the mean of the local neighborhood centered at pixel (i,j)
+    - `s` is the standard deviation of the local neighborhood centered at pixel (i,j)
+    - `k` is 0.2
+    - `R` is `0.5 * (pmax-pmin)`
+    - `pmax` is the maximum pixel value in the **entire** image
+    - `pmin` is the minimum pixel value in the **entire** image
 
 Below is an image of the formula with better formatting. This formula is from the paper [Adaptive document image binarization](https://doi.org/10.1016/S0031-3203(99)00055-2) by Sauvola and PietikaKinen, 2000.
 
-*****Image Binarization
+![Formula](Images/formula.png)
 
-The options for the user will be provided via the following command line arguments:
+**The options for the user** will be provided via the following **command line arguments:**
 
 ```
 <type>      either 'local' or 'global'
@@ -100,7 +99,7 @@ The options for the user will be provided via the following command line argumen
 <out_fname> name of the output file
 [<size>]    size of the neighborhood
 ```
-The last argument is optional, and must be provided **only** when `<type>` is 'local'. For example, see below for a few examples of how to use your tool. Note that the **correct order of command line arguments is very important.**
+The last argument is optional, and must be provided **only** when `<type>` is `local`. For example, see below for a few examples of how to use your tool. Note that the **correct order of command line arguments is very important.**
 
 ```
 $ ./prog global cover.img cover_glo.img
