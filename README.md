@@ -5,7 +5,7 @@ This a program can be used as a command line tool to perform image binarization.
 ## What is image binarization?
 In computer vision, *image binarization*, a.k.a. *thresholding* is the process of taking a grayscale image and converting it into a black and white image. In grayscale images, every pixel represents an intensity value ranging from 0 (black) to 255 (white). In black and white images, every pixel is either 0 or 255. Intensity refers to the brightness of a color, white is the brightest and therefore the most intense, black is the darkest and the least intense. The figure below shows an example of image binarization:
 
-*****Image Binarization Example
+![Binarization Example](Images/binarization_example.jpg)
 
 ## Thresholding IRL
 A popular application of (color) thresholding is recreating the effects from Andy Warhol’s Pop Art or Obama’s 2008 Hope poster by Shepard Fairey. While these posters were done by hand, using color thresholding, we can create an algorithm that does the same. Nowadays, there are many online converters that will take an image and convert it to the likes of these iconic pieces. For simplicity’s sake, we’ll be doing the more simple black and white thresholding but you’re welcome to [explore color thresholding](https://www.ecosia.org/search?q=color+thresholding) on your own!
